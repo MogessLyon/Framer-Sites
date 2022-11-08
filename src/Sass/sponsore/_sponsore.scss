@@ -1,0 +1,150 @@
+.sponsore{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 10vh 7vw;
+    background-color: #010727;
+    .sponsore__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: min(1.7rem, 2vw);
+        width: max-content;
+        height: fit-content;
+        h3, h4{
+            color: white;
+            font-weight: 500;
+        }
+    }
+    .title {
+        font-size: clamp(1.4rem, 1.8vw, 3rem);
+        text-align: center;
+    }
+    .description{
+        font-size: clamp(1rem, 1.2vw, 1.5rem);
+        width: 60%;
+        text-align: center;
+        word-break: keep-all;
+    }
+    .companies{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: min(1.5rem, 2vw);
+        margin-top: min(4vh, 2rem);
+        img {
+            height: 20px;
+            width: auto;
+        }
+    }
+    .card__companies{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: min(4vh, 2rem);
+        width: 100%;
+        gap: min(1.7rem, 2vw);
+        h3{
+            font-size: clamp(1rem, 1.8vw, 1.5rem);
+        }
+        .cards{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: min(1.7rem, 2vw);
+            width: 100%;
+        }
+        .card{
+            width: clamp(13rem, 30%, 18rem);
+            aspect-ratio: 1.5/1;
+            background-color: rgba(0, 0, 0, .2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(40px);
+            border-radius: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: min(1rem, 2vw);
+            padding: 0 10px;
+            svg{
+                height: 25px;
+            }
+            h4{
+                font-size: clamp(.8rem, 1.2vw, 1.5rem);
+            }
+
+            p{
+                font-size: clamp(.8rem, 1vw, 1rem);
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 900px){
+    .sponsore{
+        .card__companies{ 
+            .cards{
+                gap: min(1.7rem, 1vw);
+                .card{
+                    width: 32%;
+                    aspect-ratio: 1/1;  
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .sponsore{
+        .card__companies{ 
+            .cards{
+                gap: min(1.7rem, 1vw);
+                .card{
+                    width: 32%;
+                    aspect-ratio: 1/1.4;  
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .sponsore{
+        .sponsore__container{
+            gap: min(1.7rem, 5vw);
+   
+        }
+        .description{
+            width: 80%;
+        }
+        .companies{
+            width: 80%;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: min(3rem, 10vw);
+            row-gap: min(2rem, 7vh);
+        }
+        .card__companies{ 
+            gap: min(1.7rem, 4vh);
+            .cards{
+                flex-direction: column;
+                align-items: center;   
+                gap: min(1.7rem, 2vh);
+                .card{
+                    width: 90%;
+                    aspect-ratio: 1/.5;
+                    h4{
+                        font-size: 1rem
+                    }
+        
+                    p{
+                        font-size: .9rem
+                    }
+                    
+                }
+            }
+        }
+    }
+}

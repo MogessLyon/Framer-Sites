@@ -1,0 +1,73 @@
+.detailfor__course{
+    height: fit-content;
+    width: 100%;
+    color: white;
+    padding: 10vh 7vw;
+    background-color: #51011c;
+    .detailfor__course-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: min(3rem, 5vh);
+
+    }
+    .presentation{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: min(1rem, 3vh);
+        h2{
+            width: 50%;
+            font-size: clamp(1.7rem, 3vw, 4rem);
+        }
+        P{
+            width: 40%;
+            font-size: clamp(.7rem, 1.3vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: min(.5rem, 2vh);
+        .card{
+            width: fit-content;
+            max-width: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: min(1rem, 3vmin);
+            border-radius: 1rem;
+            gap: min(.5rem, 2vh);
+            img{
+                width: clamp(25px, 30%, 35px);
+            }
+            h4{
+                width: 50%;
+                font-size: clamp(.8rem, 1.8vw, 1.5rem);
+            }
+            h5{
+                color: rgba(255, 255, 255, 0.6);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+@media screen and (max-width: 475px){
+    .detailfor__course{
+        .presentation{
+            h2, p{
+                width: 90%;
+            }
+        }
+        .cards{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
+    }
+}

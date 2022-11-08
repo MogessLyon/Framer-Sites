@@ -1,0 +1,208 @@
+.comp__components{
+    .callToDownload{
+        .callToDownload__container{
+            grid-template-columns: 60% 40%;
+        }
+        .detail{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .cards{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            align-items: flex-start;
+        }
+    }
+}
+
+.comp__home{
+    .callToDownload{
+        .callToDownload__container{
+            grid-template-columns: 40% 60%;
+        }
+    }
+}
+
+.callToDownload{
+    background-image: url("../src/images/wallpaper2.jpg");
+    background-size: cover;
+    .callToDownload__container{
+        display: grid;
+        gap: min(1.8rem, 2vw);
+    }
+    .detail{
+        align-items: flex-start;
+        .title h2, .learn__more p, .sup p{
+            width: 60%;
+        }
+        .learn__more{
+            button{
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: min(3rem, 5vh);
+        .card{
+            width:  clamp(250px, 50% , 300px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2rem;
+            box-shadow: 0px 20px 50px -20px black;
+            padding: min(3rem, 4vh) min(2rem, 3vw);
+            gap: min(1rem, 1vh);
+            h3{
+                font-size: clamp(.8rem, 1.3vw, 1.6rem);
+            }
+            
+        }
+        .card__1{
+            background-color: rgb(0, 0, 0, .1);
+            backdrop-filter: blur(40px);
+            aspect-ratio: 1/1.5;
+            .svg__container{
+                width: 100%;
+                height: 70%;
+                overflow: hidden;
+                display: flex;
+                justify-content: flex-start
+            }
+            svg{
+                height: 100%;
+            }
+            p{
+                font-size: .8rem;
+            }
+        }
+        .card__2{
+            background-color: orangered;
+            aspect-ratio: 1/1.1;
+            svg{
+                width: 60%;
+                overflow: visible;
+                margin: min(3rem, 3vh) 0;
+            }
+            div span{
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+            span, p{
+                color: black;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .comp__components, .comp__home{
+        .callToDownload{
+            .callToDownload__container{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+    .callToDownload{
+        .detail{
+            .title h2, .learn__more p, .sup p{
+                width: 90%;
+            }
+        }
+        .cards{
+            .card{
+                width:  clamp(170px, 60% , 350px);
+                padding: 1.3rem;
+                gap: .8rem; 
+                h3{
+                    font-size: clamp(.7rem, 1.5vw, 1.6rem);
+                }
+                P{
+                    font-size: .7rem;
+                }
+            }
+            .card__1{
+                aspect-ratio: 1/1.4;
+                svg{
+                    width: 90%;
+                }
+            }
+            .card__2{
+                background-color: orangered;
+                aspect-ratio: 1/1;
+                svg{
+                    width: 50%;
+                    margin: min(.5rem ,1vh) 0;
+                }
+                span, p{
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .comp__components{
+        .callToDownload{
+            .callToDownload__container{
+                grid-template-columns: 1fr;
+                grid-template-rows: 40% 60%;
+            }
+            .detail{
+                grid-row: 1/2;
+                grid-column: 1/2;
+                padding-top: 0;
+            }
+            .cards{
+                grid-row: 2/3;
+                grid-column: 1/2;
+                align-items: center;
+                padding-top: 1rem;
+            }
+        }
+    }
+    .comp__home{
+        .callToDownload{
+            .callToDownload__container{
+                grid-template-columns: 1fr;
+                grid-template-rows: 60% 40%;
+            }
+        }
+    }
+    .callToDownload{
+        background-position: bottom;
+        .callToDownload__container{
+            
+        }
+        .detail{
+            padding-top: 1rem;
+            .title h2, .learn__more p, .sup p{
+                width: 90%;
+            }
+        }
+        .cards{
+            align-items: center;
+            .card{
+                width:  clamp(200px, 80% , 350px);
+                h3{
+                    font-size: clamp(.9rem, 1.3vw, 1.6rem);
+                }
+            }
+            .card__1{
+                aspect-ratio: 1/1.2;
+            }
+            .card__2{
+                aspect-ratio: 1/1;  
+                
+            }
+        }
+    }
+}

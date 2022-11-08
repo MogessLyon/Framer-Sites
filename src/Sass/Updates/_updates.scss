@@ -1,0 +1,169 @@
+.updates__one{
+    background-image: url("../src/images/wallpaper5.jpg");
+    background-size: cover;
+    height: fit-content;
+    width: 100%;
+    padding: calc(10vh + 60px) 7vw;
+
+    img{
+        height: 100px;
+    }
+    .updates__one-container{
+        display: flex;
+        flex-direction: column;
+        gap: min(3rem, 5vh);
+    }
+    .presentation{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: min(1rem, 3vh);
+        color: black;
+        svg{
+            height: 50px;
+        }
+        h2{
+            width: 50%;
+            font-size: clamp(1.7rem, 3vw, 4rem);
+        }
+        P{
+            width: 40%;
+            font-size: clamp(.7rem, 1.3vw, 1.2rem);
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+    .cards{
+        .card{
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(40px);
+            box-shadow: 0px 18px 30px -15px black;
+         }
+     
+        .brand{
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(40px);
+        }
+        .brander::before{
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+}
+
+.updates__two{
+    background-color: black;
+    height: fit-content;
+    width: 100%;
+    padding: 10vh 7vw;
+    color: white;
+    img{
+        height: 100px;
+    }
+    .updates__one-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .brand{
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-left-color: rgba(255, 255, 255, 0.2);
+    }
+    .brander::before{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.updates__one, .updates__two{
+    h3, p, h5{
+        word-break: keep-all;
+        word-wrap: normal;
+    }
+    h3{
+        font-size: clamp(.8rem, 3vw, 1.5rem);
+    }
+    p{
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .brands{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: min(1rem, 2vw);
+            
+        }
+        .card{
+            width: clamp(200px, 90%, 1000px);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: min(1.5rem, 8vmin);
+            color: white;
+            gap: min(1rem, 2vh);
+            .img{
+                overflow: hidden;
+                border-radius: 1rem;
+                img{
+                    width: 100%;
+                    height: clamp(200px, 25vh, 300px);
+                    object-fit: cover;
+                }
+            }
+            .brander{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: min(1rem, 2vh);
+                padding-top: min(1.5rem, 3vh);
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 1px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    height: .8px;
+                }
+                span{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                
+                .brand{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: min(1.8rem, 6vmin);
+                    border-radius: 1rem;
+                    gap: min(.5rem, 2vh);
+                    svg {
+                        width: 25px;
+                    }
+                    h5{
+                        font-size: clamp(.8rem, 1.5vw, 1.3rem);
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 475px) {
+    .updates__one, .updates__two{  
+        .cards{
+            .brands {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+        }
+    }
+}

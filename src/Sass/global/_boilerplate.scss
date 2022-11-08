@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #070818;
+}
+
+ul , li {
+    list-style: none;
+}
+
+a, button, input[type="submit"] {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 50px 50px 0 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+.overlays, .components, .callToDownload{
+    height: fit-content;
+    width: 100%;
+    color: white;
+    padding: 10vh 7vw;
+    .components__container,  .overlays__container{
+        width: 100%;
+        display: grid;
+        gap: min(1.8rem, 2vw);
+    }
+    .detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: min(3rem, 5vh);
+        color: white;
+        .learn__more, .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: min(3rem, 5vh);
+        }
+        .title{
+            svg{
+                height: 50px;
+            }
+            h2{
+                font-size: clamp(1.7rem, 3vw, 4rem);
+                width: fit-content;
+            }
+        }
+        .learn__more{
+            position: relative;
+            padding-bottom: 1rem;
+            p{
+                color: rgba(255, 255, 255, .7);
+                line-height: 100%;
+                font-size: clamp(.7rem, 1.1vw, 1.2rem);
+            }
+            button{
+                height: clamp(35px, 2.5vw, 3.5rem);
+                aspect-ratio: 4.5/1;
+                justify-content: center;
+                font-size: .65rem;
+                gap: .7rem;
+                svg{
+                    height: 25px;
+                }
+            }
+        }
+        .sup{
+            color: rgba(255, 255, 255, .5);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(.7rem, 1.1vw, 1.2rem);
+        }
+    }
+}
+
+.broderie{
+    stroke-dasharray: 803.9224243164062;
+    // stroke-dashoffset: 803.9224243164062;
+    stroke-dashoffset: 500;
+    transform-origin: center;
+    transform: rotate(255deg);
+}
